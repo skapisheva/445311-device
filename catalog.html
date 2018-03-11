@@ -8,7 +8,7 @@
 
     <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
     <header class="main-header">
-      <nav class="main-navigation" aria-label="Навигация по сайту">
+      <nav class="main-navigation">
         <a class="main-navigation-logo" href="index.html">
           <img src="img/logo-header.png" width="164" height="36" alt="Интернет-магазин «DEVICE»">
         </a>
@@ -20,7 +20,7 @@
           <input type="submit" value="Найти">
         </form>
 
-        <ul class="user-menu" aria-label="Меню пользователя">
+        <ul class="user-menu">
           <li class="username"><a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
               <path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/>
@@ -40,7 +40,7 @@
             Корзина</a></li>
         </ul>
 
-        <ul class="product-navigation" aria-label="Ассортимент товаров интернет-магазина">
+        <ul class="product-navigation">
           <li class="product-navigation-title">
             <a href="#">Каталог товаров</a>
             <ul class="product-navigation-list">
@@ -54,7 +54,7 @@
           </li>
         </ul>
 
-        <ul class="services-navigation" aria-label="Ассортимент услуг интернет-магазина и контакты">
+        <ul class="services-navigation">
           <li class="delivery"><a href="#">Доставка</a></li>
           <li class="guarantee"><a href="#">Гарантия</a></li>
           <li class="contacts"><a href="#">Контакты</a></li>
@@ -78,18 +78,18 @@
             <label for="filter-cost-select">Стоимость</label>
             <input type="range" id="filter-cost-select" name="filter-cost-select" min="1" max="50000" step="100">
           </div>
-          <fieldset class="filter-price">
-            <legend>Цена</legend>
-            <p><input type="checkbox" name="filter-price-select" value="black">Черный</p>
-            <p><input type="checkbox" name="filter-price-select" value="white">Белый</p>
-            <p><input type="checkbox" name="filter-price-select" value="blue">Синий</p>
-            <p><input type="checkbox" name="filter-price-select" value="red">Красный</p>
-            <p><input type="checkbox" name="filter-price-select" value="pink">Розовый</p>
+          <fieldset class="filter-color">
+            <legend>Цвет</legend>
+            <label><input type="checkbox" name="filter-color-black" value="black">Черный</label>
+            <label><input type="checkbox" name="filter-color-white" value="white">Белый</label>
+            <label><input type="checkbox" name="filter-color-blue" value="blue">Синий</label>
+            <label><input type="checkbox" name="filter-color-red" value="red">Красный</label>
+            <label><input type="checkbox" name="filter-color-pink" value="pink">Розовый</label>
           </fieldset>
           <fieldset class="filter-bluetooth">
             <legend>Bluetooth</legend>
-            <p><input type="radio" name="filter-bluetooth-select" value="yes">Есть</p>
-            <p><input type="radio" name="filter-bluetooth-select" value="no">Нет</p>
+            <label><input type="radio" name="filter-bluetooth-select" value="yes">Есть</label>
+            <label><input type="radio" name="filter-bluetooth-select" value="no">Нет</label>
           </fieldset>
           <button type="submit" name="button">Показать</button>
         </form>
@@ -180,7 +180,7 @@
         <img src="img/logo-footer.png" width="164" height="36" alt="Интернет-магазин «DEVICE»">
       </a>
 
-      <ul class="user-menu" aria-label="Меню пользователя">
+      <ul class="user-menu">
         <li class="username"><a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
             <path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/>
@@ -202,7 +202,7 @@
 
       <address title="Адрес">г. Москва, ул. Строителей, 15</address>
 
-      <ul class="services-navigation" aria-label="Ассортимент услуг интернет-магазина и контакты">
+      <ul class="services-navigation">
         <li class="delivery"><a href="#">Доставка</a></li>
         <li class="guarantee"><a href="#">Гарантия</a></li>
         <li class="contacts"><a href="#">Контакты</a></li>
@@ -210,7 +210,7 @@
 
       <a href="tel:+74954959595" class="phone" aria-label="Позвоните нам">Тел.: +7 (495) 495-95-95</a>
 
-      <ul class="social-list" title="Мы в социальных сетях">
+      <ul class="social-list">
         <li><a class="social-btn social-btn-fb" href="#" title="Мы в Фейсбук">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/>
