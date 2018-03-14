@@ -1,19 +1,19 @@
 ﻿@font-face {
   font-family: "Gilroy ExtraBold";
-  src: url("fonts/gilroyextrabold.woff2") format("woff2");
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy Light";
-  src: url("fonts/gilroylight.woff2") format("woff2");
+  src: url("../fonts/gilroylight.woff2") format("woff2");
   font-weight: lighter;
 }
 
 @font-face {
   font-family: "Open Sans Light";
-  src: url("fonts/opensanslight.woff2") format("woff2");
+  src: url("../fonts/opensanslight.woff2") format("woff2");
   font-weight: lighter;
 }
 
@@ -21,10 +21,119 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  color: #000000;
 
+  background-color: #ffffff;
 }
 
-p {
-  color: red;
+a {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  filter: alpha(Opacity=50);
+  opacity: 0.50;
+}
+
+a:active {
+  filter: alpha(Opacity=30);
+  opacity: 0.30;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: #f7e296;
+}
+
+footer {
+  background-color: #464646;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.main-navigation-logo {
+  font-size: 48px;
+  letter-spacing: 3px;
+}
+
+.search input[type="search"] {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.search input[placeholder] {
+  filter: alpha(Opacity=30);
+  opacity: 0.30;
+}
+
+.search input[placeholder]:hover {
+  filter: alpha(Opacity=50);
+  opacity: 0.50;
+}
+
+.search input[placeholder]:focus {
+  filter: alpha(Opacity=1);
+  opacity: 1;
+}
+
+.search input[type="submit"] {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+
+.search input[type="submit"]:hover {
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.search input[type="submit" value="Найти"]:active {
+  background-color: #000000;
+  filter: alpha(Opacity=50);
+  opacity: 0.50;
+}
+
+.user-menu a {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.product-navigation .product-navigation-title span {
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-align: 24px;
+  text-transform: uppercase;
+}
+
+.product-navigation-title .product-navigation-list li>a {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  text-transform: none;
+}
+
+.services-navigation {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
