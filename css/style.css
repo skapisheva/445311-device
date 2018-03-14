@@ -33,21 +33,15 @@ a {
 }
 
 a:hover {
-  filter: alpha(Opacity=50);
-  opacity: 0.50;
+  color: rgba(0, 0, 0, 0.5)
 }
 
 a:active {
-  filter: alpha(Opacity=30);
-  opacity: 0.30;
+  color: rgba(0, 0, 0, 0.3)
 }
 
 ul {
   list-style: none;
-}
-
-header {
-  background-color: #f7e296;
 }
 
 footer {
@@ -62,6 +56,10 @@ footer {
   margin: -1px;
 }
 
+.main-navigation {
+  background-color: #f7e296;
+}
+
 .main-navigation-logo {
   font-size: 48px;
   letter-spacing: 3px;
@@ -70,24 +68,18 @@ footer {
 .search input[type="search"] {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
 
   background-color: transparent;
   border: none;
 }
 
-.search input[placeholder] {
-  filter: alpha(Opacity=30);
-  opacity: 0.30;
+.search input[placeholder]:hover:-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
 }
 
-.search input[placeholder]:hover {
-  filter: alpha(Opacity=50);
-  opacity: 0.50;
-}
-
-.search input[placeholder]:focus {
-  filter: alpha(Opacity=1);
-  opacity: 1;
+.search input[type="search"]:focus {
+  color: rgba(0, 0, 0, 1);
 }
 
 .search input[type="submit"] {
@@ -104,10 +96,10 @@ footer {
   background-color: #000000;
 }
 
-.search input[type="submit" value="Найти"]:active {
+.search input[type="submit"]:active {
+  color: rgba(255, 255, 255, 0.5);
+
   background-color: #000000;
-  filter: alpha(Opacity=50);
-  opacity: 0.50;
 }
 
 .user-menu a {
@@ -136,4 +128,50 @@ footer {
   line-height: 24px;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+
+
+
+
+.slider-promo .slider-promo-title {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+}
+
+.slider-promo .slider-promo-content {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+.slider-promo .slider-promo-link {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  background-color: #f0c52e;
+}
+
+.slider-promo .slider-promo-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.slider-promo .slider-promo-link:active {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-promo .slider-promo-table td {
+  font-family: "Gilroy Light";
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.5px;
+}
+
+.slider-promo .slider-promo-table th {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
 }
