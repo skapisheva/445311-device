@@ -15,10 +15,10 @@
           DEVICE
         </a>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-          <path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/>
-        </svg>
         <form action="#" method="get" class="search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/>
+          </svg>
           <input type="search" name="user-navigation-search" placeholder="Поиск по сайту">
           <input type="submit" value="Найти">
         </form>
@@ -224,43 +224,45 @@
         </ul>
       </div>
 
-      <section class="block-about-us">
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика,<br>
-        который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки<br>
-        России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul class="transport-company">
-          <li><a href="#">Деловые линии</a></li>
-          <li><a href="#">Автотрейдинг</a></li>
-          <li><a href="#">ЖелДорЭкспедиция</a></li>
-        </ul>
-        <a class="background-link" href="#">Подробнее о нас</a>
-      </section>
+      <div class="block-info">
+        <section class="block-about-us">
+          <h2>О нас</h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика,<br>
+          который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки<br>
+          России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul class="transport-company">
+            <li><a href="#">Деловые линии</a></li>
+            <li><a href="#">Автотрейдинг</a></li>
+            <li><a href="#">ЖелДорЭкспедиция</a></li>
+          </ul>
+          <a class="block-info-link" href="#">Подробнее о нас</a>
+        </section>
 
-      <section class="block-contacts">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
-          проверить работоспособность покупки. Всякое бывает.</p>
-        <img src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
-        <a class="background-link" href="#">Напишите нам</a>
+        <section class="block-contacts">
+          <h2>Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
+            проверить работоспособность покупки. Всякое бывает.</p>
+          <img src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
+          <a class="block-info-link" href="#">Напишите нам</a>
 
-        <form action="#" method="post">
-          <label for="username-field">Ваше имя:</label>
-          <input type="text" name="username" placeholder="Имя Фамилия" id="username-field">
+          <form class="feedback" action="#" method="post">
+            <label class="feedback-label-field" for="username-field">Ваше имя:</label>
+            <input type="text" name="username" placeholder="Имя Фамилия" id="username-field">
 
-          <label for="email-field">Ваш e-mail:</label>
-          <input type="email" name="email" placeholder="email@example.com" id="email-field">
-          <label for="letter-field">Текст письма:</label>
-          <textarea name="letter" placeholder="В свободной форме" id="letter-field"></textarea>
-          <input type="submit" name="send" value="Отправить">
-        </form>
-      </section>
+            <label for="email-field">Ваш e-mail:</label>
+            <input type="email" name="email" placeholder="email@example.com" id="email-field">
+            <label for="letter-field">Текст письма:</label>
+            <textarea name="letter" placeholder="В свободной форме" id="letter-field"></textarea>
+            <input type="submit" name="send" value="Отправить">
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="page-footer">
-      <a>
-        <img src="img/logo-footer.png" width="164" height="36" alt="Интернет-магазин «DEVICE»">
+      <a class="page-footer-logo" title="Главная страница «DEVICE»">
+        DEVICE
       </a>
 
       <ul class="user-menu">
@@ -317,11 +319,13 @@
         </li>
       </ul>
 
-      <a href="https://htmlacademy.ru/intensive/htmlcss" title="Разработано">
-        <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
-          <path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
-        </svg>
-      </a>
+      <div class="developer">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" title="Разработано">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+            <path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
+          </svg>
+        </a>
+      </div>
     </footer>
   </body>
 </html>
