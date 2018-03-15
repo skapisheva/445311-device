@@ -495,3 +495,101 @@ input[type="text"] + label {
 .developer a:active {
   opacity: 0.3;
 }
+
+/*Сеточные стили*/
+html,
+body {
+  min-width: 1122px;
+  min-height: 1750px;
+}
+
+.slider-promo {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 108px;
+}
+
+.slider-promo .slide-1,
+.slider-promo .slide-2,
+.slider-promo .slide-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-1 .flex-container-item-1,
+.slide-2 .flex-container-item-1,
+.slide-3 .flex-container-item-1 {
+  width: 440px;
+}
+
+.slide-1 .flex-container-item-2,
+.slide-2 .flex-container-item-2,
+.slide-3 .flex-container-item-2 {
+  width: 540px;
+}
+
+
+.product-catalog {
+  margin-bottom: 80px;
+}
+
+.product-catalog-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.product-catalog-list li {
+  margin-right: 40px;
+}
+
+.product-catalog-list li:last-child {
+  margin-right: 0;
+}
+
+.services {
+  margin-bottom: 105px;
+
+  display: flex;
+}
+
+.services-list {
+  margin: 0;
+  margin-right: 100px;
+  padding: 0;
+
+  width: 300px;
+}
+
+.brands {
+  margin-bottom: 105px;
+}
+
+.brands ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.block-info {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.block-about-us {
+  width: 500px;
+}
+
+.block-contacts {
+  width: 560px;
+}
+
+.page-footer {
+  display: flex;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
