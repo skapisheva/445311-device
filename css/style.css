@@ -26,13 +26,34 @@
   font-style: normal;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
+  min-width: 1200px;
   margin: 0;
-  padding: 0;
+  margin-top: 40px;
+  padding: 0 20px;
 
   color: #000000;
 
   background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -43,13 +64,28 @@ body {
   margin: -1px;
 }
 
+/*Здесь начинается стилизация хедера*/
+.main-header {
+  padding-top: 50px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+
+  background-color: #f7e296;
+}
+.main-header .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
 a.main-navigation-logo {
+  position: absolute;
+  top: 12px;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 48px;
   color: #000000;
-  letter-spacing: 3px;
-  text-decoration: none;
+  letter-spacing: 0.01em;
 }
 
 a.main-navigation-logo:hover {
@@ -60,19 +96,42 @@ a.main-navigation-logo:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.search {
+  position: relative;
+  margin-left: 40px;
+}
+
+.search::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: -36px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+
 input[type="search"] {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
+  letter-spacing: 0.01em;
 
   background-color: transparent;
   border: none;
 }
 
+
 input[type="search"]::-webkit-input-placeholder,
 input[type="search"]::-moz-placeholder,
 input[type="search"]:-moz-placeholder,
 input[type="search"]:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3); /*не работает - не могу разобраться*/
 }
 
 
@@ -80,14 +139,14 @@ input[type="search"]:hover::-webkit-input-placeholder,
 input[type="search"]:hover::-moz-placeholder,
 input[type="search"]:hover:-moz-placeholder,
 input[type="search"]:hover:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6); /*не работает - не могу разобраться*/
 }
 
 input[type="search"]:focus::-webkit-input-placeholder,
 input[type="search"]:focus::-moz-placeholder,
 input[type="search"]:focus:-moz-placeholder,
 input[type="search"]:focus:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1); /*не работает - не могу разобраться*/
 }
 
 .search input[type="submit"] {
@@ -111,60 +170,159 @@ input[type="search"]:focus:-ms-input-placeholder {
 }
 
 ul.user-menu {
-  font-size: 0;
-  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
-.user-menu li>a {
+
+.user-menu a {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
   color: #000000;
   line-height: 30px;
-  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.login {
+  margin-right: 218px; /*терзают смутные сомнения*/
+}
+
+.compare {
+  margin-right: 40px; /*терзают смутные сомнения*/
+}
+
+.login-link,
+.compare-link,
+.cart-link {
+  position: relative;
+  padding-left: 14px;
+}
+.login-link::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -14px;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.compare-link::before {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: -14px;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.cart-link::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -14px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .user-menu li>a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.login-link:hover::before,
+.compare-link:hover::before,
+.cart-link:hover::before {
+  opacity: 0.6;
+}
+
 .user-menu li>a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.login-link:active::before,
+.compare-link:active::before,
+.cart-link:active::before {
+  opacity: 0.3;
+}
+
+.flex-container-medium {
+  margin-bottom: 45px; /*не нравится класс контейнера*/
+}
 
 ul.topmenu,
 ul.submenu {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
-.topmenu .down {
+ul.submenu {
+  padding-top: 15px;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+a.down {
+  position: relative;
+
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   color: #000000;
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
   line-height: 24px;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
-.topmenu .down:hover {
+a.down::after {
+  content: "";
+
+  position: absolute;
+  top: 3px; /*может есть более точный способ выравнить элемент по середине строки?*/
+  right: -32px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+a.down:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
 .topmenu .down:active {
   color: rgba(0, 0, 0, 0.3);
 }
-
+/*каким инструментом воспользоваться для позиционирования лишек в выпадающем меню?*/
 .submenu li>a {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
   color: #000000;
-  letter-spacing: 3px;
   line-height: 36px;
-  text-decoration: none;
+  letter-spacing: 0.01em;
 }
 
 .submenu li>a:hover {
@@ -176,10 +334,19 @@ ul.submenu {
 }
 
 ul.services-navigation {
-  font-size: 0;
-  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
+
+  list-style: none;
+}
+
+.delivery {
+  margin-right: 32px; /*терзают смутные сомнения*/
+}
+
+.guarantee {
+  margin-right: 114px; /*терзают смутные сомнения*/
 }
 
 .services-navigation a {
@@ -187,9 +354,8 @@ ul.services-navigation {
   font-size: 18px;
   color: #000000;
   line-height: 24px;
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
 .services-navigation a:hover {
@@ -199,71 +365,183 @@ ul.services-navigation {
 .services-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
 }
+/*Здесь заканчивается стилизация хедера*/
 
 
+/*Здесь начинается стилизация слайдера*/
+.slider-promo {
+  padding-left: 60px;
+  padding-right: 60px;
+}
 
+.slide-1 .flex-container,
+.slide-2 .flex-container,
+.slide-3 .flex-container {
+  display: flex;
+  justify-content: space-around; /*сначала использовала значение center и маргины,
+  но при разрешении монитора больше 1200px смотрится не айс. Маргины плавают, поставила space-around...Что лучше здесь?*/
+}
 
-.slider-promo .slider-promo-title {
+/*.slide-1 .flex-container-item-1 {
+  margin-right: 125px;
+}
+
+.slide-2 .flex-container-item-1 {
+  margin-right: 140px;
+}
+
+.slide-3 .flex-container-item-1 {
+  margin-right: 40px;
+}*/
+
+.slide-1,
+.slide-2,
+.slide-3 {
+  margin-bottom: 105px;
+}
+
+.slider-promo-title {
+  margin: 0;
+  margin-top: 85px;
+
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 47px;
   line-height: 56px;
+  letter-spacing: 0.01em;
 }
 
-.slider-promo .slider-promo-content {
+.slider-promo-content {
+  margin: 0;
+  margin-top: 20px;
+
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.01em;
 }
 
-.slider-promo .slider-promo-link {
+.slider-promo-link {
+  display: inline-block;
+  margin-top: 50px;
+  width: 220px;
+
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   color: #000000;
-  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  text-align: center;
+  letter-spacing: 0.2em;
 
   background-color: #f0c52e;
 }
 
-.slider-promo .slider-promo-link:hover {
+.slider-promo-link:hover {
   color: rgba(0, 0, 0, 1);
 }
 
-.slider-promo .slider-promo-link:active {
+.slider-promo-link:active {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.slider-promo .slider-promo-table td {
+.slider-promo-table {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.slider-promo-table td {
+  padding: 0;
+  padding-right: 70px;
+
   font-family: "Gilroy Light";
   font-size: 36px;
   line-height: 48px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.01em;
 }
 
-.slider-promo .slider-promo-table th {
+.slider-promo-table td:last-child {
+  padding-right: 0;
+}
+
+.slider-promo-table th {
+  padding: 0;
+  padding-top: 5px;
+  padding-right: 70px;
+
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.01em;
+}
+/*Здесь заканчивается стилизация слайдера. Не реализованы переключатели слайдера.*/
+
+
+
+/*Здесь начинается стилизация блока товарных категорий*/
+.product-catalog h2 {
+  margin: 0;
 }
 
+.product-catalog {
+  margin-bottom: 80px;
+}
 
+.product-catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 
+  list-style: none;
+}
 
+.product-catalog-list li {
+  width: 160px;
+  margin-right: 40px;
+}
 
-.product-catalog-list img {
+.product-catalog-list li:last-child {
+  margin-right: 0;
+}
+
+.block-icon {
+  display: block;
+
+  width: 160px;
+  height: 160px;
+
+  text-align: center;
+  line-height: 160px;
+
   background-color: rgba(240, 197, 46, 0.5);
 }
 
-.product-catalog-list img:hover {
+.block-icon img {
+  vertical-align: middle;
+}
+
+.block-icon-monopod img{
+  vertical-align: bottom; /*не нравится, что выведен отдельный класс.
+  Есть способ обратиться к элементу :nth-child? комбинация не сработала
+  .product-catalog-list:nth-child(2) .block-icon img*/
+}
+
+.block-icon:hover,
+.block-icon:active {
   background-color: rgba(240, 197, 46, 1);
 }
 
 .product-catalog-list img:active {
   opacity: 0.3;
+}
+
+.product-catalog-list h2 {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  letter-spacing: 0.01em;
 }
 
 .product-catalog-list a:hover {
@@ -273,7 +551,7 @@ ul.services-navigation {
 .product-catalog-list a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-
+/*Здесь заканчивается стилизация блока товарных категорий*/
 
 
 
@@ -565,83 +843,7 @@ input[type="text"] + label {
 }
 
 /*Сеточные стили*/
-html,
-body {
-  min-width: 1040px;
-  min-height: 1750px;
-}
 
-.main-header {
-  padding-top: 50px;
-  padding-right: 60px;
-  padding-bottom: 40px;
-  padding-left: 60px;
-  margin: 0 auto;
-  margin-top: 40px;
-  background-color: #f7e296;
-}
-.main-header .flex-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.user-menu li {
-  display: inline-block;
-}
-
-.services-navigation li {
-  display: inline-block;
-}
-
-
-
-.slider-promo {
-  padding-left: 60px;
-  padding-right: 60px;
-  margin: 0 auto;
-  margin-bottom: 108px;
-}
-
-.slide-1 .flex-container,
-.slide-2 .flex-container,
-.slide-3 .flex-container {
-  display: flex;
-  justify-content: center;
-}
-
-.slide-1 .flex-container-item-1 {
-  margin-right: 125px;
-}
-
-.slide-2 .flex-container-item-1 {
-  margin-right: 140px;
-}
-
-.slide-3 .flex-container-item-1 {
-  margin-right: 40px;
-}
-
-
-
-.product-catalog {
-  margin-bottom: 80px;
-}
-
-.product-catalog-list {
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  justify-content: center;
-}
-
-.product-catalog-list li {
-  margin-right: 40px;
-}
-
-.product-catalog-list li:last-child {
-  margin-right: 0;
-}
 
 .services {
   margin-bottom: 105px;
