@@ -40,7 +40,6 @@ body {
   min-width: 1200px;
   margin: 0;
   margin-top: 40px;
-  padding: 0 20px;
 
   color: #000000;
 
@@ -66,6 +65,10 @@ img {
 
 /*Здесь начинается стилизация хедера*/
 .main-header {
+  margin: 0 20px;
+}
+
+.main-navigation {
   padding-top: 50px;
   padding-right: 60px;
   padding-bottom: 40px;
@@ -73,7 +76,7 @@ img {
 
   background-color: #f7e296;
 }
-.main-header .flex-container {
+.main-navigation .flex-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -370,6 +373,7 @@ ul.services-navigation {
 
 /*Здесь начинается стилизация слайдера*/
 .slider-promo {
+  margin: 0 20px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -478,11 +482,9 @@ ul.services-navigation {
 
 
 /*Здесь начинается стилизация блока товарных категорий*/
-.product-catalog h2 {
-  margin: 0;
-}
-
 .product-catalog {
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 80px;
 }
 
@@ -527,16 +529,10 @@ ul.services-navigation {
   .product-catalog-list:nth-child(2) .block-icon img*/
 }
 
-.block-icon:hover,
-.block-icon:active {
-  background-color: rgba(240, 197, 46, 1);
-}
-
-.product-catalog-list img:active {
-  opacity: 0.3;
-}
-
 .product-catalog-list h2 {
+  margin: 0;
+  margin-top: 35px;
+
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -544,27 +540,64 @@ ul.services-navigation {
   letter-spacing: 0.01em;
 }
 
-.product-catalog-list a:hover {
+.product-catalog-list a:hover .block-icon,
+.product-catalog-list a:active .block-icon {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.product-catalog-list a:active > .block-icon > img {
+  opacity: 0.3;
+}
+
+.product-catalog-list a:hover h2 {
   color: rgba(0, 0, 0, 1);
 }
 
-.product-catalog-list a:active {
+.product-catalog-list a:active h2 {
   color: rgba(0, 0, 0, 0.3);
 }
 /*Здесь заканчивается стилизация блока товарных категорий*/
 
 
 
-
+/*Здесь начинается стилизация Табов
+  Как реализовать табы? Подскажи, пжл, а то я в курсе не помню такой темы...
+  Нагородила, мне кажется, я тут..с флексами и отступами - не нравится.
+  И как сделать чтобы серый фон был сдвинут?*/
 .services {
+  margin-bottom: 105px;
+
   background-color: #e5e5e5;
 }
 
+.services-tabs {
+  display: flex;
+  height: 390px;
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.services-list {
+  margin: 0;
+  margin-right: 115px;
+  padding: 0;
+
+  width: 278px;
+
+  list-style: none;
+  border-right: 7px solid #000000;
+}
+
 .services-link {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: #000000;
 
   background-color: #f0c52e;
 }
@@ -580,6 +613,8 @@ ul.services-navigation {
 }
 
 .services-content h2 {
+  margin: 0;
+
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -587,16 +622,70 @@ ul.services-navigation {
 }
 
 .services-content p {
+  margin: 0;
+  margin-top: 35px;
+
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.01em;
 }
 
+.delivery-content {
+  display: flex;
+  align-items: flex-start;
+
+  position: absolute;
+  z-index: 3;
+  opacity: 1;
+  margin-top: 80px;
+}
+
+.flex-content {
+  margin-right: 120px;
+}
+
+.warranty-content {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+
+.credit-content {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}
+/*Здесь заканчивается стилизация Табов*/
 
 
 
 
+/*Здесь начинается стилизация брендов*/
+.brands {
+  margin-bottom: 105px;
+}
+
+ul.brands-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+}
+
+ul.brands-list li {
+  width: 260px;
+  text-align: center;
+  margin-right: 40px;
+}
+
+ul.brands-list li:last-child {
+  margin-right: 0;
+}
 
 .brands a {
   filter: grayscale(100%);
@@ -607,8 +696,7 @@ ul.services-navigation {
   filter: none;
   opacity: 1;
 }
-
-
+/*Здесь заканчивается стилизация брендов*/
 
 
 
@@ -845,47 +933,11 @@ input[type="text"] + label {
 /*Сеточные стили*/
 
 
-.services {
-  margin-bottom: 105px;
-
-  display: flex;
-}
-
-.services-list {
-  margin: 0;
-  margin-right: 100px;
-  padding: 0;
-
-  width: 300px;
-}
 
 
 
 
-.brands {
-  margin-bottom: 105px;
-}
 
-ul.brands-list {
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  list-style: none;
-}
-
-ul.brands-list li {
-  width: 260px;
-  text-align: center;
-  margin-right: 40px;
-}
-
-ul.brands-list li:last-child {
-  margin-right: 0;
-}
 
 .block-info {
   display: flex;
