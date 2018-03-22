@@ -1,28 +1,28 @@
 ﻿@font-face {
-  font-family: "Gilroy ExtraBold";
+  font-family: "Gilroy";
   src: url("../fonts/gilroyextrabold.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy Light";
+  font-family: "Gilroy";
   src: url("../fonts/gilroylight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Open Sans Light";
+  font-family: "OpenSans";
   src: url("../fonts/opensans.woff2") format("woff2");
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   src: url("../fonts/opensanslight.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -63,6 +63,29 @@ img {
   margin: -1px;
 }
 
+.btn {
+  display: inline-block;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.2em;
+
+  background-color: #f0c52e;
+}
+
+.btn:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.btn:active {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 /*Здесь начинается стилизация хедера*/
 .main-header {
   margin: 0 20px;
@@ -85,7 +108,8 @@ img {
 a.main-navigation-logo {
   position: absolute;
   top: 12px;
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 48px;
   color: #000000;
   letter-spacing: 0.01em;
@@ -99,65 +123,43 @@ a.main-navigation-logo:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search {
-  position: relative;
-  margin-left: 40px;
+/*.search {
+    border: 2px solid transparent;
 }
 
-.search::before {
-  content: "";
+.search1:focus {
+    border-bottom: 2px solid #000000;
+}*/
 
-  position: absolute;
-  top: 2px;
-  left: -36px;
 
-  width: 16px;
-  height: 16px;
-
-  background-image: url("../img/search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-}
-
-input[type="search"] {
-  font-family: "Open Sans Light", Arial, sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.01em;
+.search input[type="search"] {
+  width: 355px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 40px;
 
   background-color: transparent;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
   border: none;
+  border-bottom: 2px solid transparent;
 }
 
-
-input[type="search"]::-webkit-input-placeholder,
-input[type="search"]::-moz-placeholder,
-input[type="search"]:-moz-placeholder,
-input[type="search"]:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.3); /*не работает - не могу разобраться*/
-}
-
-
-input[type="search"]:hover::-webkit-input-placeholder,
-input[type="search"]:hover::-moz-placeholder,
-input[type="search"]:hover:-moz-placeholder,
-input[type="search"]:hover:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.6); /*не работает - не могу разобраться*/
-}
-
-input[type="search"]:focus::-webkit-input-placeholder,
-input[type="search"]:focus::-moz-placeholder,
-input[type="search"]:focus:-moz-placeholder,
-input[type="search"]:focus:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 1); /*не работает - не могу разобраться*/
+.search input[type="search"]:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
 }
 
 .search input[type="submit"] {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  padding: 10px 20px;
+
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
 
   background-color: transparent;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
 }
 
 .search input[type="submit"]:hover {
@@ -172,6 +174,95 @@ input[type="search"]:focus:-ms-input-placeholder {
   background-color: #000000;
 }
 
+.search input[type="search"]::-webkit-input-placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input[type="search"]::-moz-placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input[type="search"]:-moz-placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input[type="search"]::placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input[type="search"]:-ms-input-placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input[type="search"]:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search input[type="search"]:hover::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search input[type="search"]:hover:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search input[type="search"]:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search input[type="search"]:hover:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search input[type="search"]:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search input[type="search"]:focus::-moz-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search input[type="search"]:focus:-moz-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search input[type="search"]:focus::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search input[type="search"]:focus:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+
+
+
+
 ul.user-menu {
   display: flex;
   margin: 0;
@@ -180,7 +271,8 @@ ul.user-menu {
 }
 
 .user-menu a {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   color: #000000;
   line-height: 30px;
@@ -288,7 +380,8 @@ ul.submenu {
 a.down {
   position: relative;
 
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   color: #000000;
   letter-spacing: 0.2em;
@@ -321,7 +414,8 @@ a.down:hover {
 }
 /*каким инструментом воспользоваться для позиционирования лишек в выпадающем меню?*/
 .submenu li>a {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   color: #000000;
   line-height: 36px;
@@ -353,7 +447,8 @@ ul.services-navigation {
 }
 
 .services-navigation a {
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   color: #000000;
   line-height: 24px;
@@ -408,7 +503,8 @@ ul.services-navigation {
   margin: 0;
   margin-top: 85px;
 
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.01em;
@@ -418,33 +514,16 @@ ul.services-navigation {
   margin: 0;
   margin-top: 20px;
 
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.01em;
 }
 
 .slider-promo-link {
-  display: inline-block;
   margin-top: 50px;
   width: 220px;
-
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
-  font-size: 18px;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.2em;
-
-  background-color: #f0c52e;
-}
-
-.slider-promo-link:hover {
-  color: rgba(0, 0, 0, 1);
-}
-
-.slider-promo-link:active {
-  color: rgba(0, 0, 0, 0.5);
 }
 
 .slider-promo-table {
@@ -456,7 +535,8 @@ ul.services-navigation {
   padding: 0;
   padding-right: 70px;
 
-  font-family: "Gilroy Light";
+  font-family: "Gilroy";
+  font-weight: 300;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.01em;
@@ -471,9 +551,9 @@ ul.services-navigation {
   padding-top: 5px;
   padding-right: 70px;
 
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 13px;
-  font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.01em;
 }
@@ -533,7 +613,8 @@ ul.services-navigation {
   margin: 0;
   margin-top: 35px;
 
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
@@ -591,7 +672,8 @@ ul.services-navigation {
 }
 
 .services-link {
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
@@ -615,7 +697,8 @@ ul.services-navigation {
 .services-content h2 {
   margin: 0;
 
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 47px;
   line-height: 48px;
   letter-spacing: 0.5px;
@@ -625,7 +708,8 @@ ul.services-navigation {
   margin: 0;
   margin-top: 35px;
 
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.01em;
@@ -687,6 +771,11 @@ ul.brands-list li:last-child {
   margin-right: 0;
 }
 
+ul.brands-list li>a:focus {
+  outline: auto;
+  opacity: 1;
+}
+
 .brands a {
   filter: grayscale(100%);
   opacity: 0.2;
@@ -696,61 +785,183 @@ ul.brands-list li:last-child {
   filter: none;
   opacity: 1;
 }
+
+.brands a:focus {
+  opacity: 1;
+}
 /*Здесь заканчивается стилизация брендов*/
 
 
+/*Здесь начинается стилизация блоков О нас и Контакты*/
+.block-info {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.block-about-us {
+  width: 500px;
+}
+
+.block-contacts {
+  width: 560px;
+}
 
 .block-info-link {
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-
-  background-color: #f0c52e;
-}
-
-.block-info-link:hover {
-  color: rgba(0, 0, 0, 1);
-}
-
-.block-info-link:active {
-  color: rgba(0, 0, 0, 0.3);
+  width: 260px;
 }
 
 .block-about-us h2,
 .block-contacts h2 {
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 47px;
   line-height: 48px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.01em;
 }
 
 .block-about-us p,
 .block-contacts p {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
 }
 
-input[type="text"] + label {
-  font-family: font-family: "Gilroy ExtraBold", Arial, sans-serif;
+.transport-company {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 40px;
+
+  list-style: none;
+}
+
+.transport-company a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.feedback > label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
 }
 
+.feedback > input,
+.feedback > textarea {
+  border: none;
+
+  background-color: rgba(234, 234, 234, 0.5);
+}
+
+.feedback > input:hover,
+.feedback > textarea:hover {
+  background-color: rgba(234, 234, 234, 1);
+}
+
+.feedback > input:focus,
+.feedback > textarea:focus {
+  background-color: rgba(234, 234, 234, 0.5);
+  outline: 3px solid #f7e296;
+}
+
+.feedback input[type="text"]::-webkit-input-placeholder,
+.feedback input[type="email"]::-webkit-input-placeholder,
+.feedback textarea[name="letter"]::-webkit-input-placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.feedback input[type="text"]::-moz-placeholder,
+.feedback input[type="email"]::-moz-placeholder,
+.feedback textarea[name="letter"]::-moz-placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.feedback input[type="text"]:-moz-placeholder,
+.feedback input[type="email"]:-moz-placeholder,
+.feedback textarea[name="letter"]:-moz-placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.feedback input[type="text"]::placeholder,
+.feedback input[type="email"]::placeholder,
+.feedback textarea[name="letter"]::placeholder {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.feedback input[type="text"]:-ms-input-placeholder,
+.feedback input[type="email"]:-ms-input-placeholder,
+.feedback textarea[name="letter"]:-ms-input-placeholder {
+ font-family: "OpenSans", Arial, sans-serif;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 18px;
+ color: rgba(70, 70, 70, 0.4);
+}
+
+
+.feedback input[type="text"]:focus::-webkit-input-placeholder,
+.feedback input[type="email"]:focus::-webkit-input-placeholder,
+.feedback textarea[name="letter"]:focus::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.feedback input[type="text"]:focus::-moz-placeholder,
+.feedback input[type="email"]:focus::-moz-placeholder,
+.feedback textarea[name="letter"]:focus::-moz-placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.feedback input[type="text"]:focus:-moz-placeholder,
+.feedback input[type="email"]:focus:-moz-placeholder,
+.feedback textarea[name="letter"]:focus:-moz-placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.feedback input[type="text"]:focus::placeholder,
+.feedback input[type="email"]:focus::placeholder,
+.feedback textarea[name="letter"]:focus::placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.feedback input[type="text"]:focus:-ms-input-placeholder,
+.feedback input[type="email"]:focus:-ms-input-placeholder,
+.feedback textarea[name="letter"]:focus:-ms-input-placeholder {
+ color: rgba(70, 70, 70, 1);
+}
+/*Здесь заканчивается стилизация блоков О нас и Контакты*/
 
 
 
 
 /*здесь начинается стилизация основного содержания страницы catalog.html*/
 .main-catalog-page .page-title {
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 47px;
   font-size: 48px;
 }
 
 .main-catalog-page .breadcrumbs a {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
@@ -766,7 +977,8 @@ input[type="text"] + label {
 
 .block-filter h2,
 .sort h2 {
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3px;
@@ -774,7 +986,8 @@ input[type="text"] + label {
 }
 
 .sort .sort-list li>a {
-  font-family: "Open Sans";
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
@@ -789,7 +1002,8 @@ input[type="text"] + label {
 }
 
 .catalog-list a {
-  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 18px;
   line-height: 24px;
 }
@@ -800,7 +1014,8 @@ input[type="text"] + label {
 }
 
 .catalog-list .price {
-  font-family: "Gilroy Light";
+  font-family: "Gilroy";
+  font-weight: 300;
   font-size: 16px;
   line-height: 24px;
 }
@@ -892,14 +1107,16 @@ input[type="text"] + label {
 }
 
 .page-footer .address {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   font-style: normal;
 }
 
 .page-footer .phone {
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   color: #ffffff;
@@ -939,18 +1156,7 @@ input[type="text"] + label {
 
 
 
-.block-info {
-  display: flex;
-  margin-bottom: 90px;
-}
 
-.block-about-us {
-  width: 500px;
-}
-
-.block-contacts {
-  width: 560px;
-}
 
 .page-footer {
   display: flex;

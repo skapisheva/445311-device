@@ -17,13 +17,15 @@
         </div>
 
         <div class="flex-container flex-container-medium">
-          <form class="search" action="#" method="get">
-            <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-              <path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/>
-            </svg>-->
-            <input type="search" name="user-navigation-search" placeholder="Поиск по сайту">
-            <input type="submit" value="Найти">
-          </form>
+          <div class="">
+            <form class="search" action="#" method="get">
+              <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/>
+              </svg>-->
+              <input type="search" name="user-navigation-search" placeholder="Поиск по сайту"><input type="submit" value="Найти">
+            </form>
+          </div>
+
 
           <ul class="user-menu">
             <li class="login"><a class="login-link" href="#">
@@ -85,7 +87,7 @@
                 как Бен Стиллер!</p>
               <p class="slider-promo-content">Самая длинная палка для селфи доступна в нашем магазине.<br>
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="slider-promo-link" href="#">Подробнее</a>
+              <a class="btn slider-promo-link" href="#">Подробнее</a>
               <table class="slider-promo-table" title="Технические характеристики">
                 <tr>
                   <td>8,5 м</td>
@@ -113,7 +115,7 @@
                 правильно!</p>
               <p class="slider-promo-content">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
                 не пропускать занятия и соблюдать диету.</p>
-              <a class="slider-promo-link" href="#">Подробнее</a>
+              <a class="btn slider-promo-link" href="#">Подробнее</a>
               <table class="slider-promo-table" title="Технические характеристики">
                 <tr>
                   <td>48 часов</td>
@@ -136,7 +138,7 @@
                 жалит как пчела!</p>
               <p class="slider-promo-content">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                 мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="slider-promo-link" href="#">Подробнее</a>
+              <a class="btn slider-promo-link" href="#">Подробнее</a>
               <table class="slider-promo-table" title="Технические характеристики">
                 <tr>
                   <td>800 м</td>
@@ -271,7 +273,7 @@
             <li><a href="#">Автотрейдинг</a></li>
             <li><a href="#">ЖелДорЭкспедиция</a></li>
           </ul>
-          <a class="block-info-link" href="#">Подробнее о нас</a>
+          <a class="btn block-info-link" href="#">Подробнее о нас</a>
         </section>
 
         <section class="block-contacts">
@@ -279,18 +281,23 @@
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
             проверить работоспособность покупки. Всякое бывает.</p>
           <img src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
-          <a class="block-info-link" href="#">Напишите нам</a>
+          <a class="btn block-info-link" href="#">Напишите нам</a>
 
-          <form class="feedback" action="#" method="post">
-            <label class="feedback-label-field" for="username-field">Ваше имя:</label>
-            <input type="text" name="username" placeholder="Имя Фамилия" id="username-field">
+          <div class="modal">
+            <form class="feedback" action="#" method="post">
 
-            <label for="email-field">Ваш e-mail:</label>
-            <input type="email" name="email" placeholder="email@example.com" id="email-field">
-            <label for="letter-field">Текст письма:</label>
-            <textarea name="letter" placeholder="В свободной форме" id="letter-field"></textarea>
-            <input type="submit" name="send" value="Отправить">
-          </form>
+              <label class="feedback-label-field" for="username-field">Ваше имя:</label>
+              <input type="text" name="username" placeholder="Имя Фамилия" id="username-field">
+
+              <label for="email-field">Ваш e-mail:</label>
+              <input type="email" name="email" placeholder="email@example.com" id="email-field">
+
+              <label for="letter-field">Текст письма:</label>
+              <textarea name="letter" placeholder="В свободной форме" id="letter-field"></textarea>
+
+              <input class="btn" type="submit" name="send" value="Отправить">
+            </form>
+          </div>
         </section>
       </div>
     </main>
