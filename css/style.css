@@ -37,9 +37,6 @@ html {
 }
 
 body {
-  min-width: 1200px;
-  margin: 0;
-  margin-top: 40px;
 
   color: #000000;
 
@@ -53,6 +50,19 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  /*min-width: 1200px;
+  margin: 0 auto;*/
+  padding-left: 30px; /*по макету 20px - запас в 10px для маленькой ширины экрана*/
+  padding-right: 30px; /*по макету 20px - запас в 10px для маленькой ширины экрана*/
+}
+
+.wrapper {
+  margin: 0 auto;
+
+  width: 1140px;
 }
 
 .visually-hidden {
@@ -88,7 +98,7 @@ img {
 
 /*Здесь начинается стилизация хедера*/
 .main-header {
-  margin: 0 20px;
+  margin-top: 40px;
 }
 
 .main-navigation {
@@ -134,9 +144,9 @@ a.main-navigation-logo:active {
 
 .search input[type="search"] {
   width: 355px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
 
   background-color: transparent;
   background-image: url("../img/search.svg");
@@ -151,8 +161,16 @@ a.main-navigation-logo:active {
   border-bottom: 2px solid #000000;
 }
 
+.search {
+  position: relative;
+}
+
 .search input[type="submit"] {
-  padding: 10px 20px;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 9px 20px;
 
   font-family: "OpenSans", Arial, sans-serif;
   font-weight: 300;
@@ -162,7 +180,9 @@ a.main-navigation-logo:active {
   border: 2px solid #000000;
 }
 
-.search input[type="submit"]:hover {
+.search:focus input[type="submit"] {
+  display: block;
+
   color: #ffffff;
 
   background-color: #000000;
@@ -468,7 +488,6 @@ ul.services-navigation {
 
 /*Здесь начинается стилизация слайдера*/
 .slider-promo {
-  margin: 0 20px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -563,14 +582,11 @@ ul.services-navigation {
 
 /*Здесь начинается стилизация блока товарных категорий*/
 .product-catalog {
-  margin-left: 20px;
-  margin-right: 20px;
   margin-bottom: 80px;
 }
 
 .product-catalog-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -590,8 +606,8 @@ ul.services-navigation {
 .block-icon {
   display: block;
 
-  width: 160px;
-  height: 160px;
+  /*width: 160px;
+  height: 160px;*/
 
   text-align: center;
   line-height: 160px;
@@ -654,10 +670,6 @@ ul.services-navigation {
 .services-tabs {
   display: flex;
   height: 390px;
-
-  margin-left: 20px;
-  margin-right: 20px;
-
 }
 
 .services-list {
@@ -725,10 +737,6 @@ ul.services-navigation {
   margin-top: 80px;
 }
 
-.flex-content {
-  margin-right: 120px;
-}
-
 .warranty-content {
   position: absolute;
   z-index: 2;
@@ -794,8 +802,11 @@ ul.brands-list li>a:focus {
 
 /*Здесь начинается стилизация блоков О нас и Контакты*/
 .block-info {
-  display: flex;
   margin-bottom: 90px;
+}
+
+.block-info .flex-container {
+    display: flex;
 }
 
 .block-about-us {
@@ -1060,26 +1071,64 @@ ul.brands-list li>a:focus {
 
 
 
+/*здесь начинается стилизация футера*/
 
+.wrapper {
+  width: 1140px;
+}
+
+.page-footer .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .page-footer {
-  color: #ffffff;
+  padding-top: 65px;
+  padding-bottom: 65px;
 
+  color: #ffffff;
   background-color: #464646;
 }
 
-.page-footer-logo {
+.page-footer .flex-container-1 {
+  margin-bottom: 35px;
+}
+
+.page-footer .flex-container-2 {
+  margin-bottom: 65px;
+}
+
+a.page-footer-logo {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
   font-size: 48px;
-  line-height: 48px;
-  letter-spacing: 3px;
+  line-height: auto;
+  letter-spacing: 0.01em;
   color: rgba(255, 198, 0, 1);
 }
 
-.page-footer-logo:hover {
+a.page-footer-logo:hover {
   color: rgba(255, 198, 0, 0.6);
 }
 
-.page-footer-logo:active {
+a.page-footer-logo:active {
   color: rgba(255, 198, 0, 0.3);
+}
+
+.page-footer .login-link::before,
+.page-footer .compare-link::before,
+.page-footer .cart-link::before {
+  top: 10;  /*не бьет стили хедера*/
+  left: -15; /*не бьет стили хедера*/
+
+}
+
+.page-footer .user-menu > li {
+  margin-right: 40px;
+}
+
+.page-footer .user-menu > li:last-child {
+  margin-right: 0;
 }
 
 .page-footer .user-menu a {
@@ -1127,6 +1176,27 @@ ul.brands-list li>a:focus {
   color: #ffffff;
 }
 
+.style-element::before {
+  content: "";
+
+  display: block;
+  width: 80px;
+
+  border: 7px solid #ffc600;
+}
+
+.social-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-list > li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
 .social-list a {
   opacity: 0.3;
 }
@@ -1146,20 +1216,4 @@ ul.brands-list li>a:focus {
 .developer a:active {
   opacity: 0.3;
 }
-
-/*Сеточные стили*/
-
-
-
-
-
-
-
-
-
-
-.page-footer {
-  display: flex;
-  padding-top: 65px;
-  padding-bottom: 65px;
-}
+/*здесь заканчивается стилизация футера*/
