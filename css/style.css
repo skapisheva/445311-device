@@ -486,7 +486,15 @@ a.main-navigation-logo:active {
 }
 
 .submenu li {
+  display: none;
+
   width: 200px;
+  /*position: relative;  скрыть выпадающее меню получилось
+  z-index: -1;  скрыть выпадающее меню получилось  */
+}
+
+/*.down:hover .submenu li {
+  z-index: 1;  а вот показать выпадающее меню - нет  */
 }
 
 .submenu li:first-child {
@@ -514,6 +522,9 @@ a.main-navigation-logo:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.product-navigation-title:hover .submenu li {
+  display: block;
+}
 
 
 /*  Услуги  */
@@ -559,11 +570,12 @@ a.main-navigation-logo:active {
 .slider {
   position: relative;
 
-  margin-top: -130px;
+   /*margin-top: -166px;  увеличиваю margin-top: -130px; на высоту .submenu li = 36px
+  padding-top: 36px; /* компенсирует   */
+
   padding-left: 60px;
   padding-right: 60px;
 
-  z-index: 0;
 }
 
 .slider-list .flex {
@@ -607,6 +619,8 @@ a.main-navigation-logo:active {
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.01em;
+
+  z-index: 0;
 }
 
 .slider-list h3::before {
@@ -1196,9 +1210,11 @@ ul.brands-list li>a:focus {
   text-decoration: none;
 }
 
-.block-contacts img {
+.block-contacts .contacts-map {
   padding-top: 10px;
   margin-bottom: 57px;
+
+  cursor: pointer;
 }
 
 /*  КАРТА */
@@ -1216,8 +1232,16 @@ ul.brands-list li>a:focus {
   z-index: 1;
 }
 
+.modal-map iframe {
+  border: none;
+}
+
 .modal-map p {
   margin: 0;
+}
+
+.modal-show {
+  display: block;
 }
 
 /*  ВСПЛЫВАЮЩАЯ ФОРМА ОБРАТНОЙ СВЯЗИ  */
@@ -1435,6 +1459,10 @@ ul.brands-list li>a:focus {
 
 
 /*здесь начинается стилизация страницы catalog.html*/
+.exit-link {
+  opacity: 0.3;
+}
+
 .catalog-background {
   /*background: -webkit-gradient(linear, left top, right top, color-stop(30%, #efefef), color-stop(30%, #ffffff), color-stop(70%, #ffffff));*/
   background: -webkit-linear-gradient(left, #efefef 30%, #ffffff 30%, #ffffff 70%);
@@ -1472,6 +1500,7 @@ ul.brands-list li>a:focus {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
+  padding-top: 40px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -1582,6 +1611,83 @@ ul.brands-list li>a:focus {
 
   border-top: 2px solid #000000;
 }
+
+/*  PRICE-BAR  */
+.range-filter {
+  width: 200px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 25px;
+  padding-top: 12px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #dbdbdb;
+}
+
+.range-controls .bar {
+  width: 60%;
+  height: 2px;
+
+  background: #91c92f;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 4px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+          box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: -5px;
+}
+
+.range-controls .toggle-max {
+  left: 120px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label,
+.price-controls input {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price-controls label {
+  margin-right: 40px;
+}
+
+.price-controls input {
+  width: 35px;
+
+  border: none;
+  background-color: inherit;
+}
+/*  the END PRICE-BAR  */
 
 .filter-item--1 label,
 .filter-item--2 label {
