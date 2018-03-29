@@ -1240,10 +1240,6 @@ ul.brands-list li>a:focus {
   margin: 0;
 }
 
-.modal-show {
-  display: block;
-}
-
 /*  ВСПЛЫВАЮЩАЯ ФОРМА ОБРАТНОЙ СВЯЗИ  */
 .modal {
   position: fixed;
@@ -1281,6 +1277,14 @@ ul.brands-list li>a:focus {
   border-radius: 50%;
 
   cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.modal-close:active {
+  background-color: rgba(240, 197, 46, 0.3);
 }
 
 .modal-close::before,
@@ -1333,39 +1337,39 @@ ul.brands-list li>a:focus {
   line-height: 24px;
 }
 
-.feedback input[type="text"],
-.feedback input[type="email"] {
+.feedback-username,
+.feedback-email {
   width: 360px;
   height: 50px;
 }
 
-.feedback textarea[name="letter"] {
+.feedback-letter {
   width: 760px;
   height: 155px;
   resize: none;
 }
 
-.feedback input[type="text"],
-.feedback input[type="email"],
-.feedback textarea[name="letter"] {
+.feedback-username,
+.feedback-email,
+.feedback-letter {
   padding: 15px 20px;
 
   border: none;
   background-color: rgba(234, 234, 234, 0.5);
 }
 
-.feedback input[type="text"]:hover,
-.feedback input[type="email"]:hover,
-.feedback textarea[name="letter"]:hover {
+.feedback-username:hover,
+.feedback-email:hover,
+.feedback-letter:hover {
   background-color: rgba(234, 234, 234, 0.8);
 }
 
-.feedback input[type="text"]:active,
-.feedback input[type="email"]:active,
-.feedback textarea[name="letter"]:active,
-.feedback input[type="text"]:focus,
-.feedback input[type="email"]:focus,
-.feedback textarea[name="letter"]:focus {
+.feedback-username:hover:active,
+.feedback-email:active,
+.feedback-letter:active,
+.feedback-username:focus,
+.feedback-email:focus,
+.feedback-letter:focus {
   background-color: rgba(255, 255, 255, 1);
   outline: 3px solid rgba(240, 197, 46, 0.5);
 }
@@ -2254,3 +2258,32 @@ a.page-footer-logo:active {
   opacity: 0.3;
 }
 /*здесь заканчивается стилизация футера*/
+
+/*  POPUP   */
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.invalid {
+  background-color: rgba(237, 181, 181, 0.5);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  70% {
+    transform: translateX(30px);
+  }
+
+  90% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
