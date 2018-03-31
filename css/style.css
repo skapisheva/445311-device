@@ -59,8 +59,6 @@ img {
   padding-right: 20px;
 
   width: 1200px;
-
-  outline: 2px solid black;
 }
 
 .visually-hidden {
@@ -76,7 +74,7 @@ img {
   position: relative;
   z-index: 0;
   display: inline-block;
-  padding: 8px 40px;
+  padding: 8px 42px;
 
   height: 40px;
 
@@ -131,9 +129,11 @@ img {
 }
 
 .main-navigation {
-  padding-top: 50px;
+  /*padding-top: 50px; было*/
+  padding-top: 40px;
   padding-right: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
+  /*padding-bottom: 50px; было*/
   padding-left: 60px;
 
   background-color: #f7e296;
@@ -171,19 +171,22 @@ a.main-navigation-logo:active {
 
 /*  ПОИСК ПО САЙТУ  */
 .navigation-item {
-  margin-bottom: 35px;
+  /*margin-bottom: 35px; было*/
+  margin-bottom: 32px;
 }
 
 .search input[type="search"] {
   width: 355px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 30px;
+  /*padding-left: 30px; было*/
+  padding-left: 40px;
 
   background-color: transparent;
   background-image: url("../img/search.svg");
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  /*background-position: 0 50%;*/
+  background-position: 5px 50%;
   border: none;
   border-bottom: 2px solid transparent;
 }
@@ -340,11 +343,12 @@ a.main-navigation-logo:active {
 }
 
 .login {
-  margin-right: 213px;
+  margin-right: 215px;
 }
 
 .compare {
-  margin-right: 40px;
+  /*margin-right: 40px; было*/
+  margin-right: 35px;
 }
 
 .username,
@@ -357,7 +361,8 @@ a.main-navigation-logo:active {
 .cart-link,
 .username-link {
   position: relative;
-  padding-left: 30px;
+  /*padding-left: 30px; было*/
+  padding-left: 25px;
 }
 
 .login-link::before,
@@ -365,8 +370,8 @@ a.main-navigation-logo:active {
   content: "";
 
   position: absolute;
-  top: 5px;
-  left: 0;
+  top: 8px;
+  left: 3px;
 
   width: 13px;
   height: 13px;
@@ -380,8 +385,8 @@ a.main-navigation-logo:active {
   content: "";
 
   position: absolute;
-  top: 5px;
-  left: 1px;
+  top: 6px;
+  left: 5px;
 
   width: 10px;
   height: 10px;
@@ -505,7 +510,7 @@ a.main-navigation-logo:active {
 }
 
 .submenu:last-child li {
-  padding-bottom: 20px;
+  padding-bottom: 33px;
 }
 
 .submenu-item--1 {
@@ -519,7 +524,7 @@ a.main-navigation-logo:active {
 }
 
 .submenu-item--3 {
-  top: 115px;
+  top: 110px;
   left: -60px;
 }
 
@@ -564,11 +569,13 @@ a.main-navigation-logo:active {
 }
 
 .delivery {
-  margin-right: 40px;
+  /*margin-right: 40px; было*/
+  margin-right: 38px;
 }
 
 .guarantee {
-  margin-right: 115px;
+  /*margin-right: 115px; было*/
+  margin-right: 100px;
 }
 
 .services-navigation a {
@@ -626,11 +633,12 @@ a.main-navigation-logo:active {
 }
 
 .flex-item--1 {
-  padding-left: 20px;
+  padding-left: 50px;
   width: 560px;
 }
 
 .flex-item--2 {
+  padding-left: 40px;
   width: 600px;
 }
 
@@ -648,7 +656,7 @@ a.main-navigation-logo:active {
 .slider-list h3 {
   position: relative;
   margin: 0;
-  margin-top: 85px;
+  margin-top: 82px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -663,7 +671,7 @@ a.main-navigation-logo:active {
   content: "";
 
   position: absolute;
-  top: -50px;
+  top: -45px;
   display: block;
 
   width: 100px;
@@ -732,7 +740,7 @@ a.main-navigation-logo:active {
 }
 
 .btn-slider {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .property-table {
@@ -742,7 +750,7 @@ a.main-navigation-logo:active {
 
 .property-table td {
   padding: 0;
-  padding-right: 70px;
+  padding-right: 75px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 300;
@@ -872,7 +880,7 @@ a.main-navigation-logo:active {
 
 .product-catalog-list h2 {
   margin: 0;
-  margin-top: 35px;
+  margin-top: 32px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -924,7 +932,7 @@ a.main-navigation-logo:active {
   padding: 0;
   padding-top: 75px;
 
-  width: 280px;
+  width: 287px;
 
   list-style: none;
 }
@@ -946,8 +954,8 @@ a.main-navigation-logo:active {
 .service-tabs-item {
   position: relative;
   display: block;
-  margin-bottom: 25px;
-  padding: 10px 25px;
+  margin-bottom: 23px;
+  padding: 10px 28px;
 
   z-index: 0;
 
@@ -1012,8 +1020,8 @@ a.main-navigation-logo:active {
 
 .service-list {
   margin: 0;
-  margin-top: 70px;
-  padding-left: 115px;
+  margin-top: 72px;
+  padding-left: 120px;
 
   width: 880px;
 
@@ -1027,7 +1035,7 @@ a.main-navigation-logo:active {
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.01em;
 }
 
 .service-list p {
@@ -1043,7 +1051,7 @@ a.main-navigation-logo:active {
 
 .service-item {
   display: none;
-  margin-right: 40px;
+  margin-right: 60px;
   padding-right: 275px;
 }
 
@@ -1080,8 +1088,8 @@ a.main-navigation-logo:active {
 .service-item:nth-child(1) {
   background-image: url(../img/delivery.svg);
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
+  background-position: right 10px;
+  background-size: auto;
 }
 
 .service-item:nth-child(2) {
@@ -1101,7 +1109,7 @@ a.main-navigation-logo:active {
 
 /*Здесь начинается стилизация брендов*/
 .brands {
-  margin-bottom: 105px;
+  margin-bottom: 100px;
 }
 
 ul.brands-list {
@@ -1157,7 +1165,7 @@ ul.brands-list li>a:focus {
 
 /*Здесь начинается стилизация блоков О нас и Контакты*/
 .block-info {
-  margin-bottom: 90px;
+  margin-bottom: 82px;
   padding-top: 55px;
 }
 
@@ -1169,7 +1177,7 @@ ul.brands-list li>a:focus {
 
 .block-about-us {
   width: 500px;
-  margin-right: 140px;
+  margin-right: 100px;
 }
 
 .block-contacts {
@@ -1177,6 +1185,7 @@ ul.brands-list li>a:focus {
 }
 
 .block-about-us .btn {
+  margin-left: 5px;
   padding: 8px 20px;
 }
 
@@ -1184,7 +1193,7 @@ ul.brands-list li>a:focus {
 .block-contacts h2 {
   position: relative;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -1208,7 +1217,7 @@ ul.brands-list li>a:focus {
 .block-about-us p,
 .block-contacts p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   font-family: "OpenSans", Arial, sans-serif;
   font-weight: 300;
@@ -1218,9 +1227,10 @@ ul.brands-list li>a:focus {
 
 .transport-company {
   margin: 0;
-  margin-bottom: 50px;
+  margin-left: 15px;
+  margin-bottom: 53px;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 35px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -1255,7 +1265,7 @@ ul.brands-list li>a:focus {
 
 .block-contacts .contacts-map {
   padding-top: 10px;
-  margin-bottom: 57px;
+  margin-bottom: 63px;
 
   cursor: pointer;
 }
@@ -1922,9 +1932,12 @@ ul.brands-list li>a:focus {
   color: rgba(0, 0, 0, 1);
 }
 
-.catalog .active {
+.catalog .active,
+.catalog .active:hover,
+.catalog .active:active {
   color: rgba(0, 0, 0, 1);
   opacity: 1;
+  cursor: default;
 }
 
 .indicator .up-dir {
@@ -2135,6 +2148,14 @@ a[class="active"] {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d9d9d9;
 }
+
+.page-number li:hover a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.page-number li:active a {
+  color: rgba(0, 0, 0, 1);
+}
 /*здесь заканчивается стилизация основного содержания страницы catalog.html*/
 
 /*здесь начинается стилизация футера*/
@@ -2151,19 +2172,19 @@ a[class="active"] {
 }
 
 .page-footer {
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 48px;
+  padding-bottom: 45px;
 
   color: #ffffff;
   background-color: #464646;
 }
 
 .page-footer .flex-container-1 {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
 .page-footer .flex-container-2 {
-  margin-bottom: 65px;
+  margin-bottom: 62px;
 }
 
 a.page-footer-logo {
@@ -2237,7 +2258,8 @@ a.page-footer-logo:active {
 }
 
 .page-footer .delivery,
-.page-footer .guarantee {
+.page-footer .guarantee,
+.page-footer .contacts {
   margin-right: 35px;
 }
 
@@ -2267,13 +2289,14 @@ a.page-footer-logo:active {
 .social-list {
   margin: 0;
   padding: 0;
+  margin-right: 30px;
 
   list-style: none;
 }
 
 .social-list > li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 18px;
 }
 
 .social-list a {
