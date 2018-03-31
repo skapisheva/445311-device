@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
 
@@ -14,14 +14,10 @@
           <div class="flex">
             <a class="main-navigation-logo" title="Главная страница «DEVICE»">DEVICE</a>
           </div>
-
           <div class="flex navigation-item">
-
               <form class="search" action="#" method="get">
                 <input type="search" name="user-navigation-search" placeholder="Поиск по сайту"><input type="submit" value="Найти">
               </form>
-
-
             <ul class="user-menu">
               <li class="login"><a class="login-link" href="#">
                 Войти</a></li>
@@ -31,21 +27,20 @@
                 Корзина</a></li>
             </ul>
           </div>
-
           <div class="flex">
             <ul class="topmenu product-navigation">
               <li class="product-navigation-title">
                 <a class="down" href="#">Каталог товаров</a>
-                <ul class="submenu product-navigation-list">
+                <ul class="submenu submenu-item--1 product-navigation-list">
                   <li><a href="#">Виртуальная реальность</a></li>
                   <li><a href="#">Фитнес-браслеты</a></li>
                   <li><a href="#">Квадрокоптеры</a></li>
                 </ul>
-                <ul class="submenu product-navigation-list">
+                <ul class="submenu submenu-item--2 product-navigation-list">
                   <li><a href="catalog.html">Моноподы для селфи</a></li>
                   <li><a href="#">Умные часы</a></li>
                 </ul>
-                <ul class="submenu product-navigation-list">
+                <ul class="submenu submenu-item--3 product-navigation-list">
                   <li><a href="#">Экшн-камеры</a></li>
                 </ul>
               </li>
@@ -61,15 +56,16 @@
 
       <main class="mane-page">
         <h1 class="visually-hidden">Девайсы и гаджеты</h1>
-
         <section class="container slider">
           <h2 class="visually-hidden">Популярные товары</h2>
+          <input class="visually-hidden" type="radio" id="slide-1" name="slider-btn" checked>
+          <input class="visually-hidden" type="radio" id="slide-2" name="slider-btn">
+          <input class="visually-hidden" type="radio" id="slide-3" name="slider-btn">
           <div class="slider-controls">
-            <i class="active"></i>
-            <i></i>
-            <i></i>
+            <label for="slide-1"><i class="control--1">Первый слайд</i></label>
+            <label for="slide-2"><i class="control--2">Второй слайд</i></label>
+            <label for="slide-3"><i class="control--3">Третий слайд</i></label>
           </div>
-
           <ul class="slider-list">
             <li class="slider-item slider--1" title="Палка для селфи">
               <div class="flex">
@@ -145,9 +141,7 @@
             </li>
           </ul>
         </section>
-
         <section class="container product-catalog">
-
             <h2 class="visually-hidden">Каталог товаров</h2>
             <ul class="product-catalog-list">
               <li><a href="#">
@@ -176,12 +170,10 @@
                 <h2>Квадрокоптеры</h2>
               </a></li>
             </ul>
-
         </section>
 
         <section class="block-service">
           <div class="container flex">
-
               <h2 class="visually-hidden">Услуги</h2>
               <input class="visually-hidden" type="radio" id="service-1" name="toggle" checked>
               <input class="visually-hidden" type="radio" id="service-2" name="toggle">
@@ -205,13 +197,9 @@
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                 </li>
               </ul>
-
           </div>
-
         </section>
-
         <div class="container brands">
-
             <h2 class="visually-hidden">Производители девайсов и гаджетов</h2>
             <ul class="brands-list">
               <li>
@@ -235,9 +223,7 @@
                 </a>
               </li>
             </ul>
-
         </div>
-
         <div class="container block-info">
           <div class="flex">
             <section class="block-about-us">
@@ -253,7 +239,6 @@
               </ul>
               <a class="btn" href="#">Подробнее о нас</a>
             </section>
-
             <section class="block-contacts">
               <h2>Контакты</h2>
               <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
@@ -271,13 +256,14 @@
                     <label class="feedback-label-field" for="username-field">Ваше имя:</label>
                     <input class="feedback-username" type="text" name="username" placeholder="Имя Фамилия" id="username-field">
                   </p>
-
-                  <p><label for="email-field">Ваш e-mail:</label>
-                  <input class="feedback-email" type="email" name="email" placeholder="email@example.com" id="email-field"></p>
-
-                  <p><label for="letter-field">Текст письма:</label>
-                  <textarea class="feedback-letter" name="letter" placeholder="В свободной форме" id="letter-field"></textarea></p>
-
+                  <p>
+                    <label for="email-field">Ваш e-mail:</label>
+                    <input class="feedback-email" type="email" name="email" placeholder="email@example.com" id="email-field">
+                  </p>
+                  <p>
+                    <label for="letter-field">Текст письма:</label>
+                    <textarea class="feedback-letter" name="letter" placeholder="В свободной форме" id="letter-field"></textarea>
+                  </p>
                   <button class="btn" type="submit">Отправить</button>
                 </form>
                 <button class="modal-close" type="button">Закрыть</button>
@@ -293,7 +279,6 @@
             <a class="page-footer-logo" title="Главная страница «DEVICE»">
               DEVICE
             </a>
-
             <ul class="user-menu">
               <li class="login"><a class="login-link" href="#">
                 Войти</a></li>
@@ -303,19 +288,15 @@
                 Корзина</a></li>
             </ul>
           </div>
-
           <div class="flex flex-container-2">
             <address class="address" title="Адрес">г. Москва, ул. Строителей, 15</address>
-
             <ul class="services-navigation">
               <li class="delivery"><a href="#">Доставка</a></li>
               <li class="guarantee"><a href="#">Гарантия</a></li>
               <li class="contacts"><a href="#">Контакты</a></li>
             </ul>
-
             <a href="tel:+74954959595" class="phone" aria-label="Позвоните нам">Тел.: +7 (495) 495-95-95</a>
           </div>
-
           <div class="flex flex-container-3">
             <span class="style-element"></span>
             <ul class="social-list">
@@ -342,7 +323,6 @@
                 </a>
               </li>
             </ul>
-
             <div class="developer">
               <a href="https://htmlacademy.ru/intensive/htmlcss" title="Разработано">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
@@ -353,7 +333,7 @@
           </div>
         </div>
       </footer>
-      <script src="js/map-popup.js"></script>
-      <script src="js/feedback-popup.js"></script>
+      <script src="js/map-popup.min.js"></script>
+      <script src="js/feedback-popup.min.js"></script>
   </body>
 </html>

@@ -94,7 +94,7 @@ img {
   content: "";
   position: absolute;
   top: 40%;
-  left: 0px;
+  left: 0;
   height: 8px;
   width: 100%;
   background-color: #f0c52e;
@@ -105,7 +105,7 @@ img {
 }
 
 .btn:hover::before {
-  top: 0px;
+  top: 0;
   height: 100%;
   -webkit-transition: all 300ms ease;
        -o-transition: all 300ms ease;
@@ -113,7 +113,7 @@ img {
 }
 
 .btn:active::before {
-  top: 0px;
+  top: 0;
   height: 100%;
 }
 
@@ -211,23 +211,24 @@ a.main-navigation-logo:active {
   background-color: transparent;
   border: 2px solid #000000;
   border-bottom: none;
+
+  cursor: pointer;
 }
 
-.search input[type="search"]:focus + input[type="submit"] {
-  opacity: 1;
-}
-
-.search input[type="submit"]:hover {
+.search input[type="search"]:focus + input[type="submit"]:hover {
   opacity: 1;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 1);
 }
 
-.search input[type="submit"]:active,
-.search input[type="submit"]:focus {
+.search input[type="submit"]:active {
   opacity: 1;
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(0, 0, 0, 1);
+}
+
+.search input[type="search"]:focus + input[type="submit"] {
+  opacity: 1;
 }
 
 /*  PLACEHOLDER   */
@@ -365,7 +366,7 @@ a.main-navigation-logo:active {
 
   position: absolute;
   top: 5px;
-  left: 0px;
+  left: 0;
 
   width: 13px;
   height: 13px;
@@ -395,7 +396,7 @@ a.main-navigation-logo:active {
 
   position: absolute;
   top: 5px;
-  left: 0px;
+  left: 0;
 
   width: 12px;
   height: 12px;
@@ -439,6 +440,7 @@ a.main-navigation-logo:active {
 .down {
   position: relative;
   padding-right: 30px;
+  padding-bottom: 20px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -454,7 +456,7 @@ a.main-navigation-logo:active {
 
   position: absolute;
   top: 2px;
-  right: 0px;
+  right: 0;
 
   width: 16px;
   height: 16px;
@@ -473,36 +475,64 @@ a.main-navigation-logo:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.down + .submenu {
-  margin-top: 20px;
+.topmenu > li {
+  position: relative;
 }
 
 .submenu {
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  z-index: 2;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  width: 1160px;
+
+  background-color: rgba(247, 226, 150, 0);
+}
+
+.submenu li {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.submenu-item--2 li:nth-child(2) {
+  padding-left: 25px;
+}
+
+.submenu:last-child li {
+  padding-bottom: 20px;
+}
+
+.submenu-item--1 {
+  top: 35px;
+  left: -60px;
+}
+
+.submenu-item--2 {
+  top: 75px;
+  left: -60px;
+}
+
+.submenu-item--3 {
+  top: 115px;
+  left: -60px;
 }
 
 .submenu li {
   display: none;
-
-  width: 200px;
-  /*position: relative;  скрыть выпадающее меню получилось
-  z-index: -1;  скрыть выпадающее меню получилось  */
 }
 
-/*.down:hover .submenu li {
-  z-index: 1;  а вот показать выпадающее меню - нет  */
+.product-navigation-title:hover .submenu>li {
+  display: block;
 }
 
-.submenu li:first-child {
-  margin-right: 20px;
-}
-
-.submenu li:nth-child(3n) {
-  width: 100px;
+.product-navigation-title:hover .submenu {
+  background-color: rgba(247, 226, 150, 1);
 }
 
 .submenu li>a {
@@ -521,11 +551,6 @@ a.main-navigation-logo:active {
 .submenu li>a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-
-.product-navigation-title:hover .submenu li {
-  display: block;
-}
-
 
 /*  Услуги  */
 .services-navigation {
@@ -565,17 +590,25 @@ a.main-navigation-logo:active {
 }
 /*Здесь заканчивается стилизация хедера*/
 
-
 /*Здесь начинается стилизация слайдера*/
 .slider {
   position: relative;
 
-   /*margin-top: -166px;  увеличиваю margin-top: -130px; на высоту .submenu li = 36px
-  padding-top: 36px; /* компенсирует   */
-
   padding-left: 60px;
   padding-right: 60px;
+}
 
+.slider::before {
+  content: "";
+
+  position: absolute;
+  top: -175px;
+  left: 20px;
+  z-index: -1;
+
+  width: 1160px;
+  height: 290px;
+  background-color: #f7e296;
 }
 
 .slider-list .flex {
@@ -592,10 +625,6 @@ a.main-navigation-logo:active {
   margin-bottom: 105px;
 }
 
-.slider-item:nth-child(1) {
-  display: block;
-}
-
 .flex-item--1 {
   padding-left: 20px;
   width: 560px;
@@ -606,7 +635,14 @@ a.main-navigation-logo:active {
 }
 
 .slider--3 .flex-item--1 {
-  padding-left: 0px;
+  padding-top: 70px;
+  padding-right: 40px;
+  padding-left: 0;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
 }
 
 .slider-list h3 {
@@ -755,11 +791,25 @@ a.main-navigation-logo:active {
   cursor: pointer;
 }
 
-.slider-controls i:not(:last-child) {
+.slider-controls label:not(:last-child) {
   margin-right: 20px;
 }
 
-.slider-controls .active::after {
+#slide-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+#slide-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#slide-3:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: block;
+}
+
+#slide-1:checked ~ .slider-controls .control--1::after,
+#slide-2:checked ~ .slider-controls .control--2::after,
+#slide-3:checked ~ .slider-controls .control--3::after {
   content: "";
 
   position: absolute;
@@ -775,7 +825,6 @@ a.main-navigation-logo:active {
   background: #ffffff;
 }
 /*Здесь заканчивается стилизация слайдера.*/
-
 
 /*Здесь начинается стилизация блока товарных категорий*/
 .product-catalog {
@@ -851,18 +900,14 @@ a.main-navigation-logo:active {
 }
 /*Здесь заканчивается стилизация блока товарных категорий*/
 
-
-
 /*  Здесь начинается стилизация Табов   */
 .block-service {
   margin-bottom: 105px;
 
+  background-color: #e5e5e5;
   /*background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ffffff), color-stop(25%, #e5e5e5), color-stop(75%, #e5e5e5));*/
-
   background: -webkit-linear-gradient(top, #ffffff 25%, #e5e5e5 25%, #e5e5e5 75%);
-
   background: -o-linear-gradient(top, #ffffff 25%, #e5e5e5 25%, #e5e5e5 75%);
-
   background: linear-gradient(to bottom, #ffffff 25%, #e5e5e5 25%, #e5e5e5 75%);
 }
 
@@ -925,7 +970,7 @@ a.main-navigation-logo:active {
 
   position: absolute;
   top: 40%;
-  left: 0px;
+  left: 0;
   bottom: 0px;
 
   width: 100%;
@@ -944,7 +989,7 @@ a.main-navigation-logo:active {
 }
 
 .service-tabs-item:hover::before {
-  top: 0px;
+  top: 0;
   height: 100%;
   -webkit-transition: all 200ms ease;
        -o-transition: all 200ms ease;
@@ -956,7 +1001,7 @@ a.main-navigation-logo:active {
 }
 
 .service-tabs-item:active::before {
-  top: 0px;
+  top: 0;
   height: 100%;
   width: 280px;
   background-color: #000000;
@@ -1054,7 +1099,6 @@ a.main-navigation-logo:active {
 }
 /*Здесь заканчивается стилизация Табов*/
 
-
 /*Здесь начинается стилизация брендов*/
 .brands {
   margin-bottom: 105px;
@@ -1110,7 +1154,6 @@ ul.brands-list li>a:focus {
   opacity: 1;
 }
 /*Здесь заканчивается стилизация брендов*/
-
 
 /*Здесь начинается стилизация блоков О нас и Контакты*/
 .block-info {
@@ -1197,7 +1240,7 @@ ul.brands-list li>a:focus {
 
   position: absolute;
   top: 15px;
-  left: 0px;
+  left: 0;
 
   width: 8px;
   height: 8px;
@@ -1424,7 +1467,6 @@ ul.brands-list li>a:focus {
  color: rgba(70, 70, 70, 0.4);
 }
 
-
 .feedback input[type="text"]:focus::-webkit-input-placeholder,
 .feedback input[type="email"]:focus::-webkit-input-placeholder,
 .feedback textarea[name="letter"]:focus::-webkit-input-placeholder {
@@ -1461,21 +1503,23 @@ ul.brands-list li>a:focus {
 }
 /*Здесь заканчивается стилизация блоков О нас и Контакты*/
 
-
 /*здесь начинается стилизация страницы catalog.html*/
 .exit-link {
   opacity: 0.3;
 }
 
 .catalog-background {
-  /*background: -webkit-gradient(linear, left top, right top, color-stop(30%, #efefef), color-stop(30%, #ffffff), color-stop(70%, #ffffff));*/
-  background: -webkit-linear-gradient(left, #efefef 30%, #ffffff 30%, #ffffff 70%);
-  background: -o-linear-gradient(left, #efefef 30%, #ffffff 30%, #ffffff 70%);
-  background: linear-gradient(to right, #efefef 30%, #ffffff 30%, #ffffff 70%);
+  background-color: #ffffff;
+  /*background: -webkit-gradient(linear, left top, right top, color-stop(20%, #efefef), color-stop(20%, #ffffff), color-stop(80%, #ffffff));*/
+  background: -webkit-linear-gradient(left, #efefef 20%, #ffffff 20%, #ffffff 80%);
+  background: -o-linear-gradient(left, #efefef 20%, #ffffff 20%, #ffffff 80%);
+  background: linear-gradient(to right, #efefef 20%, #ffffff 20%, #ffffff 80%);
 }
 
 .catalog-head-background {
   height: 70px;
+
+  background-color: #ebebeb;
   /*background: -webkit-gradient(linear, left top, right top, color-stop(30%, #dcdcdc), color-stop(30%, #ebebeb), color-stop(70%, #ebebeb));*/
   background: -webkit-linear-gradient(left, #dcdcdc 30%, #ebebeb 30%, #ebebeb 70%);
   background: -o-linear-gradient(left, #dcdcdc 30%, #ebebeb 30%, #ebebeb 70%);
@@ -1726,11 +1770,9 @@ ul.brands-list li>a:focus {
   cursor: pointer;
 }
 
-.filter-item .property--1:focus,
+.property--1 input[type="checkbox"]:focus + .checkbox-indicator,
 .property--2 input[type="radio"]:focus + .radio-indicator {
-  /*  стили при фокусе  - не могу разобраться, не светится*/
-  border-color: #663d15;
-  outline: thin dotted;
+  outline: thin initial;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
@@ -1741,8 +1783,8 @@ ul.brands-list li>a:focus {
   top: 8px;
   left: 1px;
 
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
 
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
@@ -2093,12 +2135,9 @@ a[class="active"] {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d9d9d9;
 }
-
 /*здесь заканчивается стилизация основного содержания страницы catalog.html*/
 
-
 /*здесь начинается стилизация футера*/
-
 .page-footer .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2188,7 +2227,6 @@ a.page-footer-logo:active {
 .page-footer .cart-link::before {
   background-image: url("../img/cart-yellow.svg");
 }
-
 
 .page-footer .address {
   font-family: "OpenSans", Arial, sans-serif;
