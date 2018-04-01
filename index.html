@@ -3,12 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+      <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="filtersPicture">
+            <feComposite in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+        </defs>
+      </svg>
 
-    <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
       <header class="container main-header">
         <nav class="main-navigation" aria-label="Навигация по сайту">
           <div class="flex">
@@ -28,21 +35,23 @@
             </ul>
           </div>
           <div class="flex">
-            <ul class="topmenu product-navigation">
-              <li class="product-navigation-title">
+            <ul class="topmenu">
+              <li class="topmenu-title">
                 <a class="down" href="#">Каталог товаров</a>
-                <ul class="submenu submenu-item--1 product-navigation-list">
-                  <li><a href="#">Виртуальная реальность</a></li>
-                  <li><a href="#">Фитнес-браслеты</a></li>
-                  <li><a href="#">Квадрокоптеры</a></li>
-                </ul>
-                <ul class="submenu submenu-item--2 product-navigation-list">
-                  <li><a href="catalog.html">Моноподы для селфи</a></li>
-                  <li><a href="#">Умные часы</a></li>
-                </ul>
-                <ul class="submenu submenu-item--3 product-navigation-list">
-                  <li><a href="#">Экшн-камеры</a></li>
-                </ul>
+                <div class="submenu-wrap">
+                  <ul class="submenu submenu-item--1">
+                    <li><a href="#">Виртуальная реальность</a></li>
+                    <li><a href="catalog.html">Моноподы для селфи</a></li>
+                    <li><a href="#">Экшн-камеры</a></li>
+                  </ul>
+                  <ul class="submenu submenu-item--2">
+                    <li><a href="#">Фитнес-браслеты</a></li>
+                    <li><a href="#">Умные часы</a></li>
+                  </ul>
+                  <ul class="submenu submenu-item--3">
+                    <li><a href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
             <ul class="services-navigation">
@@ -204,22 +213,30 @@
             <ul class="brands-list">
               <li>
                 <a class="brand-1" href="#">
-                  <img src="img/logo-1.jpg" width="127" height="73" alt="Логотип компании «DJI»">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+                    <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/logo-1.jpg" />
+                  </svg>
                 </a>
               </li>
               <li>
                 <a class="brand-2" href="#">
-                  <img src="img/logo-2.jpg" width="256" height="48" alt="Логотип компании «SP GADGETS»">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+                    <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/logo-2.jpg" />
+                  </svg>
                 </a>
               </li>
               <li>
                 <a class="brand-3" href="#">
-                  <img src="img/logo-3.jpg" width="184" height="48" alt="Логотип компании «GoPro»">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+                    <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/logo-3.jpg" />
+                  </svg>
                 </a>
               </li>
               <li>
                 <a class="brand-4" href="#">
-                  <img src="img/logo-4.jpg" width="200" height="56" alt="Логотип компании «VIVE»">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" width="260" height="100">
+                    <image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="260" height="100" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/logo-4.jpg" />
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -233,7 +250,7 @@
               <p>Мы можем доставить ваш товар в самые отдаленные точки<br>
               России! DEVICE работает со многими транспортными компаниями:</p>
               <ul class="transport-company">
-                <li><a href="#">Деловые линии</a></li>
+                <li><a href="#">Деловые Линии</a></li>
                 <li><a href="#">Автотрейдинг</a></li>
                 <li><a href="#">ЖелДорЭкспедиция</a></li>
               </ul>

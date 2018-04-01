@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="catalog-page">
 
-    <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
     <header class="container main-header">
       <nav class="main-navigation" aria-label="Навигация по сайту">
         <div class="flex">
@@ -32,21 +31,23 @@
           </ul>
         </div>
         <div class="flex">
-          <ul class="topmenu product-navigation">
-            <li class="product-navigation-title">
+          <ul class="topmenu">
+            <li class="topmenu-title">
               <a class="down" href="#">Каталог товаров</a>
-              <ul class="submenu submenu-item--1 product-navigation-list">
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">Квадрокоптеры</a></li>
-              </ul>
-              <ul class="submenu submenu-item--2 product-navigation-list">
-                <li><a href="catalog.html">Моноподы для селфи</a></li>
-                <li><a href="#">Умные часы</a></li>
-              </ul>
-              <ul class="submenu submenu-item--3 product-navigation-list">
-                <li><a href="#">Экшн-камеры</a></li>
-              </ul>
+              <div class="submenu-wrap">
+                <ul class="submenu submenu-item--1">
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="catalog.html">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
+                </ul>
+                <ul class="submenu submenu-item--2">
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
+                </ul>
+                <ul class="submenu submenu-item--3">
+                  <li><a href="#">Квадрокоптеры</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
           <ul class="services-navigation">
@@ -93,7 +94,7 @@
                 <legend>Цвет</legend>
                 <label class="property--1">
                   <input class="visually-hidden" type="checkbox" name="filter-property-black" value="black">
-                  <span class="checkbox-indicator">Черный</span>
+                  <span class="checkbox-indicator active">Черный</span>
                 </label>
                 <label class="property--1">
                   <input class="visually-hidden" type="checkbox" name="filter-property-white" value="white">
@@ -101,11 +102,11 @@
                 </label>
                 <label class="property--1">
                   <input class="visually-hidden" type="checkbox" name="filter-property-blue" value="blue">
-                  <span class="checkbox-indicator">Синий</span>
+                  <span class="checkbox-indicator active">Синий</span>
                 </label>
                 <label class="property--1">
                   <input class="visually-hidden" type="checkbox" name="filter-property-red" value="red">
-                  <span class="checkbox-indicator">Красный</span>
+                  <span class="checkbox-indicator active">Красный</span>
                 </label>
                 <label class="property--1">
                   <input class="visually-hidden" type="checkbox" name="filter-property-pink" value="pink">
@@ -116,7 +117,7 @@
                 <legend>Bluetooth</legend>
                 <label class="property--2">
                   <input class="visually-hidden" type="radio" name="filter-property-select" value="yes">
-                  <span class="radio-indicator">Есть</span>
+                  <span class="radio-indicator active">Есть</span>
                 </label>
                 <label class="property--2">
                   <input class="visually-hidden" type="radio" name="filter-property-select" value="no">
@@ -172,9 +173,8 @@
                   </div>
                 </div>
                 <div class="product-tittle">
-                  <a href="#">Профессиональная<br>
-                    селфи-палка</a>
-                  <span class="product-price">1500 руб.</span>
+                  <a href="#">Профессиональная селфи-палка</a>
+                  <span class="product-price">1 500 руб.</span>
                 </div>
               </div>
               <div class="product-wrap">
@@ -187,11 +187,11 @@
                 </div>
                 <div class="product-tittle">
                   <a href="#">Непотопляемая селфи-палка</a>
-                  <span class="product-price">2500 руб.</span>
+                  <span class="product-price">2 500 руб.</span>
                 </div>
               </div>
               <div class="product-wrap">
-                <div class="product-item">
+                <div class="product-item product-item-sticker">
                   <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                   <div class="product-buttons">
                     <a href="#" class="btn">В корзину</a>
@@ -199,9 +199,8 @@
                   </div>
                 </div>
                 <div class="product-tittle">
-                  <a href="#">Селфи-палка «Следуй<br>
-                    за мной»</a>
-                  <span class="product-price">2500 руб.</span>
+                  <a href="#">Селфи-палка «Следуй за мной»</a>
+                  <span class="product-price">4 900 руб.</span>
                 </div>
               </div>
               <ul class="pagination">
