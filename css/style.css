@@ -1811,6 +1811,9 @@ ul.brands-list li>a:focus {
 
 .filter-item--1 label,
 .filter-item--2 label {
+  width: 100%;
+  display: inline-block;
+
   font-family: "OpenSans", Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
