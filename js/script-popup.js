@@ -46,6 +46,7 @@ mapLink.addEventListener("click", function (evt) {
       username.classList.add("invalid");
       email.classList.add("invalid");
       letter.classList.add("invalid");
+      console.log("Упс, заполнены не все поля формы");
     }
   });
 

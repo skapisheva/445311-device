@@ -74,9 +74,8 @@ img {
   position: relative;
   z-index: 0;
   display: inline-block;
-  padding: 8px 42px;
-
-  height: 40px;
+  vertical-align: middle;
+  padding: 8px 40px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -86,6 +85,7 @@ img {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.2em;
+  word-break: break-word;
 }
 
 .btn::before {
@@ -719,6 +719,8 @@ a.main-navigation-logo {
 
 .btn-slider {
   margin-top: 43px;
+
+  width: 220px;
 }
 
 .property-table {
@@ -770,6 +772,7 @@ a.main-navigation-logo {
   position: relative;
 
   display: inline-block;
+  vertical-align: middle;
   padding: 5px;
 
   border: 1px solid #000000;
@@ -892,9 +895,9 @@ a.main-navigation-logo {
   margin-bottom: 95px;
 
   background-color: #e5e5e5;
-  background: -webkit-linear-gradient(top, #ffffff 25%, #e5e5e5 25%, #e5e5e5 75%);
-  background: -o-linear-gradient(top, #ffffff 25%, #e5e5e5 25%, #e5e5e5 75%);
-  background: linear-gradient(to bottom, #ffffff 25%, #e5e5e5 25%, #e5e5e5 75%);
+  background: -webkit-linear-gradient(top, #ffffff 100px, #e5e5e5 100px, #e5e5e5 75%);
+  background: -o-linear-gradient(top, #ffffff 100px, #e5e5e5 100px, #e5e5e5 75%);
+  background: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px, #e5e5e5 75%);
 }
 
 .block-service .flex {
@@ -1110,8 +1113,6 @@ ul.brands-list {
 }
 
 ul.brands-list li {
-  width: 260px;
-  text-align: center;
   margin-right: 40px;
 }
 
@@ -1119,64 +1120,39 @@ ul.brands-list li:last-child {
   margin-right: 0;
 }
 
+.brands-list a {
+  display: block;
 
-/* ul.brands-list li {
   width: 260px;
-  text-align: center;
-  margin-right: 40px;
+  height: 100px;
 }
 
-ul.brands-list li:last-child {
-  margin-right: 0;
+.brands-list a>img {
+  vertical-align: bottom;
 }
 
-ul.brands-list li>a:focus {
-  outline: auto;
-  opacity: 1;
-}
-
-.brands a {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  opacity: 0.2;
-}
-
-.brands a:hover {
-  -webkit-filter: none;
-          filter: none;
-  opacity: 1;
-}
-
-.brands a:focus {
-  opacity: 1;
-} */
-
-.brand-1 svg {
+.brand-1 {
   background-image: url("../img/logo-1.jpg");
-}
-.brand-2 svg {
-  background-image: url("../img/logo-2.jpg");
-}
-.brand-3 svg {
-  background-image: url("../img/logo-3.jpg");
-}
-.brand-4 svg {
-  background-image: url("../img/logo-4.jpg");
-}
-
-.brands-list svg {
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.2;
+}
+.brand-2 {
+  background-image: url("../img/logo-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.brand-3 {
+  background-image: url("../img/logo-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.brand-4 {
+  background-image: url("../img/logo-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.brands-list a:hover svg,
-.brands-list a:focus svg {
-  opacity: 1;
-}
-
-.brands-list a:hover image,
-.brands-list a:focus image {
+.brands-list img:hover {
   opacity: 0;
 }
 /*Здесь заканчивается стилизация брендов*/
@@ -1204,11 +1180,15 @@ ul.brands-list li>a:focus {
 
 .block-about-us .btn {
   margin-left: 2px;
-  padding: 8px 20px 8px 23px;
+  padding: 8px 20px 8px 20px;
+
+  width: 260px;
 }
 
 .block-contacts .btn {
-  padding: 8px 41px;
+  padding: 8px 40px;
+
+  width: 264px;
 }
 
 .block-about-us h2,
@@ -1392,6 +1372,7 @@ ul.brands-list li>a:focus {
 
 .modal-feedback p {
   display: inline-block;
+  vertical-align: top;
   margin: 0;
   margin-bottom: 35px;
 }
@@ -1813,6 +1794,7 @@ ul.brands-list li>a:focus {
 .filter-item--2 label {
   width: 100%;
   display: inline-block;
+  vertical-align: top;
 
   font-family: "OpenSans", Arial, sans-serif;
   font-weight: 300;
@@ -1835,6 +1817,8 @@ ul.brands-list li>a:focus {
 
 .filter button[class="btn"] {
   margin-top: 31px;
+
+  width: 201px;
 
   border: none;
   background: none;
@@ -1903,19 +1887,35 @@ ul.brands-list li>a:focus {
   opacity: 1;
 }
 
-.property--1 input[type="checkbox"] + .active::before {
-  background-image: url(../img/checkbox-on.svg);
-  opacity: 1;
-}
-
 .property--2 input[type="radio"]:checked + .radio-indicator::before {
   background-image: url(../img/radio-on.svg);
   opacity: 1;
 }
 
-.property--2 input[type="radio"] + .active::before {
-  background-image: url(../img/radio-on.svg);
-  opacity: 1;
+.property--1 input[type="checkbox"]:disabled + .checkbox-indicator,
+.property--2 input[type="radio"]:disabled + .radio-indicator,
+.property--1 input[type="checkbox"]:disabled:hover + .checkbox-indicator,
+.property--2 input[type="radio"]:disabled:hover + .radio-indicator,
+.property--1 input[type="checkbox"]:disabled + .checkbox-indicator::before,
+.property--2 input[type="radio"]:disabled + .radio-indicator::before,
+.property--1 input[type="checkbox"]:disabled:hover + .checkbox-indicator::before,
+.property--2 input[type="radio"]:disabled:hover + .radio-indicator::before {
+  color: #a6a6a6;
+  opacity: 0.25;
+  cursor: default;
+}
+
+.property--1 input[type="checkbox"]:checked:disabled + .checkbox-indicator,
+.property--2 input[type="radio"]:checked:disabled + .radio-indicator,
+.property--1 input[type="checkbox"]:checked:disabled:hover + .checkbox-indicator,
+.property--2 input[type="radio"]:checked:disabled:hover + .radio-indicator,
+.property--1 input[type="checkbox"]:checked:disabled + .checkbox-indicator::before,
+.property--2 input[type="radio"]:checked:disabled + .radio-indicator::before,
+.property--1 input[type="checkbox"]:checked:disabled:hover + .checkbox-indicator::before,
+.property--2 input[type="radio"]:checked:disabled:hover + .radio-indicator::before {
+  color: #a6a6a6;
+  opacity: 0.25;
+  cursor: default;
 }
 
 .property--1 input[type="checkbox"]:checked:hover + .checkbox-indicator::before,
@@ -2415,6 +2415,7 @@ a.page-footer-logo {
 
 .social-list > li {
   display: inline-block;
+  vertical-align: top;
   margin-right: 18px;
 }
 
