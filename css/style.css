@@ -1891,6 +1891,16 @@ ul.brands-list li:last-child {
   opacity: 1;
 }
 
+.property--1 input[type="checkbox"]:checked:active + .checkbox-indicator::before {
+  background-image: url(../img/checkbox-off.svg);
+  opacity: 1;
+}
+
+.property--2 input[type="radio"]:checked:active + .radio-indicator::before {
+  background-image: url(../img/radio-off.svg);
+  opacity: 1;
+}
+
 .property--1 input[type="checkbox"]:disabled + .checkbox-indicator,
 .property--2 input[type="radio"]:disabled + .radio-indicator,
 .property--1 input[type="checkbox"]:disabled:hover + .checkbox-indicator,
@@ -1902,6 +1912,14 @@ ul.brands-list li:last-child {
   color: #a6a6a6;
   opacity: 0.25;
   cursor: default;
+}
+
+.property--1 input[type="checkbox"]:disabled:active + .checkbox-indicator::before {
+  background-image: url(../img/checkbox-off.svg);
+}
+
+.property--2 input[type="radio"]:disabled:active + .radio-indicator::before {
+  background-image: url(../img/radio-off.svg);
 }
 
 .property--1 input[type="checkbox"]:checked:disabled + .checkbox-indicator,
@@ -1920,16 +1938,6 @@ ul.brands-list li:last-child {
 .property--1 input[type="checkbox"]:checked:hover + .checkbox-indicator::before,
 .property--2 input[type="radio"]:checked:hover + .radio-indicator::before {
   opacity: 0.6;
-}
-
-.property--1 input[type="checkbox"]:checked:active + .checkbox-indicator::before {
-  background-image: url(../img/checkbox-off.svg);
-  opacity: 1;
-}
-
-.property--2 input[type="radio"]:checked:active + .radio-indicator::before {
-  background-image: url(../img/radio-off.svg);
-  opacity: 1;
 }
 
 .catalog {
